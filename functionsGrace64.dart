@@ -1,7 +1,27 @@
 void clearConsole() => print("\x1B[2J");
-void clearConsole2() => print("\x1B[2J");
+void clearConsole2() => print("\x1B[2J\x1B[0;0H");
 
 void lineBreak() => print('');
+
+//C2F
+double tempCtoF(int a) => (9 / 5) * a + 32;
+double tempFtoC(int a) => (5 / 9) * (a - 32);
+
+//User Input Number
+// double userInputNumber(String? a) {
+// print('Welcome to BMI Calculator');
+//     while (a == null) {
+//     print('How much do you weigh? (Kilograms!)');
+//     print('No freedom units please');
+//     a = double.tryParse(stdin.readLineSync() ?? '');
+//       if (a == null) {
+//         print('');
+//         print('This is not a number');
+//         print('Please try again');
+//         print('');
+//       }
+//   }
+// }
 
 //Sum of 2 numbers
 double addTwo(double a, double b) {
@@ -14,6 +34,35 @@ double addThree(double a, double b, double c) {
   double result = a + b + c;
   return result;
 }
+
+//Geometeri
+//Circle
+// A
+double circleAreaCalculator(double input) => 3.14 * (input * input);
+//d
+double circleDiameterCalculator (double input) => 2 * input;
+//u
+double circlePerimeterCalculator(double input) => 2 * 3.14 * input;
+//Square
+//A
+double sqrAreaCalculator(double input) => input * input;
+//d
+double sqrDiagonalCalculator(double input) => sqrt(2) * input;
+//u
+double sqrPerimeterCalculator(double input) => input * 4;
+//Cube
+//A
+double cubeAreaCalculator(double input) => 6 * (input * input);
+//V
+double cubeVolumaCalculator(double input) => input * input * input;
+//Sphere
+//A
+double sphereAreaCalculator(double input) => 4 * 3.14 * (input * input);
+//V
+double sphereVolumeCalculator(double input) => (4 / 3) * 3.14 * (input * input * input);
+
+
+
 
 //Text Length
 int textLength(String text) {
@@ -74,6 +123,27 @@ void printMeChecker(bool printer, String wInput, String lInput) {
     print('The letter "$lInput" does not appear in the word "$wInput"');
     lineBreak();
   }
+}
+
+//wordToList
+List<String>? wordToList(String wordInput) {
+  List<String> myList = [];
+  for (var i = 0; i < wordInput.length; i++) {
+    myList.add(wordInput[i]);
+  }
+    return myList;
+}
+
+int wordToListCounter(String wordInput) {
+  List<String> myList = [];
+  for (var i = 0; i < wordInput.length; i++) {
+    myList.add(wordInput[i]);
+  }
+    return myList.length;
+}
+
+String printCount(String a) {
+  return '$a -> ${wordToListCounter(a)}';
 }
 
 //Vowel Checker
