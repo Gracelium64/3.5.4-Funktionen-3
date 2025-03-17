@@ -1,7 +1,14 @@
+import 'dart:io';
+import 'dart:math';
+
 void clearConsole() => print("\x1B[2J");
 void clearConsole2() => print("\x1B[2J\x1B[0;0H");
 
 void lineBreak() => print('');
+
+//User Input int
+int? userInputint = int.tryParse(stdin.readLineSync() ?? '');
+
 
 //C2F
 double tempCtoF(int a) => (9 / 5) * a + 32;
@@ -24,16 +31,10 @@ double tempFtoC(int a) => (5 / 9) * (a - 32);
 // }
 
 //Sum of 2 numbers
-double addTwo(double a, double b) {
-  double result = a + b ;
-  return result;
-}
+double addTwo(double a, double b) => a + b;
 
 //Sum of 3 numbers
-double addThree(double a, double b, double c) {
-  double result = a + b + c;
-  return result;
-}
+double addThree(double a, double b, double c) => a + b + c;
 
 //Geometeri
 //Circle

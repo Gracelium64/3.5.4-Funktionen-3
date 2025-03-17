@@ -1,4 +1,4 @@
-import 'dart:async';
+// import 'dart:async';
 import 'dart:math';
 import 'dart:io';
 import '../../functionsGrace64.dart';
@@ -6,7 +6,7 @@ import '../../main.dart';
 
 
 
-double? geomatryCalculator(double input) {
+void geomatryCalculator(double input) {
 
   clearConsole();
   bunny();

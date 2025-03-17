@@ -35,6 +35,7 @@ void main() {
         case 99:
         clearConsole2();
         print('Computer, end program');
+        lineBreak();
         default: 
         input = null;
     }
